@@ -1,0 +1,95 @@
+/* 🔱 Global Styles */
+body, html, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
+  color: #fff;
+}
+
+/* 🌄 Main layout */
+.main-container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(120deg, #000428, #004e92);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+/* 🔮 Overlay blur */
+.main-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(6px);
+}
+
+/* 🧭 Sidebar */
+.sidebar {
+  z-index: 10;
+  width: 220px;
+  background: rgba(10, 10, 30, 0.8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 2rem;
+  box-shadow: 0 0 20px rgba(100, 100, 255, 0.3);
+}
+
+.title {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #00c3ff;
+  text-shadow: 0 0 8px #00c3ff;
+  margin-bottom: 2rem;
+}
+
+.menu-btn {
+  background: none;
+  border: 2px solid transparent;
+  color: #ddd;
+  margin: 0.4rem 0;
+  padding: 0.6rem 1.2rem;
+  border-radius: 10px;
+  transition: 0.3s;
+  cursor: pointer;
+  width: 80%;
+  font-weight: 500;
+}
+
+.menu-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #00f3ff;
+  color: #fff;
+}
+
+.menu-btn.active {
+  background: linear-gradient(90deg, #00f3ff, #8a2be2);
+  color: white;
+  box-shadow: 0 0 10px #00f3ff;
+}
+
+/* 🧩 Content area */
+.content {
+  flex: 1;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.module-box {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 2rem 3rem;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+  font-size: 1.5rem;
+  backdrop-filter: blur(8px);
+  color: #fff;
+  text-align: center;
+}
